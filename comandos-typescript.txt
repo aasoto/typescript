@@ -1,0 +1,15 @@
+*************** TYPESCRIPT **************
+//instalar typescript de manera global (para instalar typescript de manera global se deben dar permisos de administrador al ejecutar el siguiente comando por consola)
+npm install -g typescript
+
+//para transpilar código de typescript y convertirlo en código de javascript ejecutar el siguiente comando (asegurarse de estar en la carpeta donde se encuentra el archivo que se desea transpilar) tsc {nombre del archivo}
+tsc app
+
+//crear archivo TSConfig.json (ejecutar en el administrador)
+tsc --init
+
+//una vez creado el TSConfig.json se pueden generar los archivos javascript solamente ejecutando:
+tsc
+
+//para ejecutar el modo observador de typescript ejecutar:
+tsc --watch
