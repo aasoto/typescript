@@ -23,5 +23,5 @@
     }
   } 
 
-  console.log(aprobado(false))
+  console.log(aprobado(true))
 })()

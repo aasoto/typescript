@@ -19,3 +19,20 @@ tsc --watch
 
 //para eliminar los comentarios del archivo de javascript se debe descomentar la siguiente linea en el archivo tsconfig.js 
 "removeComments": true,          /* Disable emitting comments. */
+
+//para excluir una carpeta de la compilación de typescript esta debe colocarse en una sección del tsconfig.json en el campo de "exclude", ejemplo:
+"exclude": [
+  "librerias_externas/*.ts",
+  "pruebas/"
+] 
+//si se requiere incluir una carpeta o archivo que esté excluido por defecto o prederminadamente de la complicación en typescript, este se debe incluir en la sección de "include" en el tsconfig.json, ejemplo:
+"include": [
+  "node_modules"
+]
+//ninguna de la secciones de exclude e include se encuentran definidas predeterminandamente en el archivo tsconfig.json que se descarga, por lo que se deben incluir al final del mismo.
+
+//para generar el archivo de main.js donde se encuentra todo el código de javascript compilado de todos los archivos de typescript se debe descomentar en el archivo tsconfig.ts la siguiente línea y colocar el nombre del archivo que se desea generar:
+"outFile": "./main.js",            /* Specify a file that bundles all outputs into one JavaScript file. If 'declaration' is true, also designates a file that bundles all .d.ts output. */
+
+//luego cambiar en el campo de "modules" (gestores de módulos) el modulo utilizado, por defecto viene commonjs y este se debe reemplazar por amd, quedaría así:
+"module": "amd",                   /* Specify what module code is generated. */
