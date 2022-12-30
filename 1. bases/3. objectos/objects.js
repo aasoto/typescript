@@ -6,8 +6,6 @@
         powers: ['Súper velocidad', 'Viajar en el tiempo']
     };
     console.log(flash);
-    //cuando se asignan nuevos valores al objecto d esta manera
-    //se sobreescriben todos los anteriores
     flash = {
         name: 'Clack Kent',
         powers: ['Súper fuerza'],
@@ -20,3 +18,4 @@
         console.log(flash.getName());
     }
 })();
+//# sourceMappingURL=objects.js.map

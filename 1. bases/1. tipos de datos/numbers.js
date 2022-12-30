@@ -10,3 +10,4 @@
     }
     console.log({ avengers });
 })();
+//# sourceMappingURL=numbers.js.map

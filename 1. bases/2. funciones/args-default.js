@@ -1,6 +1,5 @@
 "use strict";
 (() => {
-    //En este tipo de argumento se inicializa el argumento en la función
     const fullName = (firstName, lastName, upper = false) => {
         if (upper) {
             return `${firstName} ${lastName || 'no lastname'}`.toUpperCase();
@@ -13,3 +12,4 @@
     console.log(fullName('Andrés'));
     console.log(fullName('Andrés', 'Soto', true));
 })();
+//# sourceMappingURL=args-default.js.map

@@ -13,3 +13,9 @@ tsc
 
 //para ejecutar el modo observador de typescript ejecutar:
 tsc --watch
+
+//para generar los .map de los archivos javascript se debe entrar el archivo tsconfig.json y luego descomentar la línea que dice:
+"sourceMap": true,               /* Create source map files for emitted JavaScript files. */
+
+//para eliminar los comentarios del archivo de javascript se debe descomentar la siguiente linea en el archivo tsconfig.js 
+"removeComments": true,          /* Disable emitting comments. */

@@ -7,3 +7,4 @@ const city = {
 };
 city.population = 500000;
 console.log(city.population + 1);
+//# sourceMappingURL=app.js.map

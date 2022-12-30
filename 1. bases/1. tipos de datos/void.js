@@ -1,8 +1,5 @@
 "use strict";
 (() => {
-    /**
-     * El void es utilizado cuando una función no regresa nada
-     */
     function callBatman() {
         return;
     }
@@ -11,3 +8,4 @@
     };
     console.log(callBatman(), callSuperman());
 })();
+//# sourceMappingURL=void.js.map

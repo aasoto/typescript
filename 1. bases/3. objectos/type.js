@@ -14,3 +14,4 @@
     };
     console.log(flash, superman);
 })();
+//# sourceMappingURL=type.js.map

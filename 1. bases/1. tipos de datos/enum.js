@@ -1,9 +1,5 @@
 "use strict";
 (() => {
-    /**
-     * El enum sirve para tener escalas con valores predeterminados, igual estospueden ser modificados
-     */
-    //enum por defecto
     let EscalaNumerica;
     (function (EscalaNumerica) {
         EscalaNumerica[EscalaNumerica["min"] = 0] = "min";
@@ -13,7 +9,6 @@
     const valor = EscalaNumerica.medium;
     console.log(valor);
     console.log(EscalaNumerica);
-    //enum modificado
     let EscalaCalificaciones;
     (function (EscalaCalificaciones) {
         EscalaCalificaciones[EscalaCalificaciones["deficiente"] = 0] = "deficiente";
@@ -25,7 +20,6 @@
     const nota = EscalaCalificaciones.sobresaliente;
     console.log(nota);
     console.log(EscalaCalificaciones);
-    //cuando no se colocan valores en las variables estan toman la unidad siguiente a la variable anterior
     let enumeracion;
     (function (enumeracion) {
         enumeracion[enumeracion["a"] = 10] = "a";
@@ -36,3 +30,4 @@
     console.log(enumeracion.d);
     console.log(enumeracion);
 })();
+//# sourceMappingURL=enum.js.map
