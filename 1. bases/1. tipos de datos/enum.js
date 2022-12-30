@@ -25,4 +25,13 @@
     const nota = EscalaCalificaciones.sobresaliente;
     console.log(nota);
     console.log(EscalaCalificaciones);
+    let enumeracion;
+    (function (enumeracion) {
+        enumeracion[enumeracion["a"] = 10] = "a";
+        enumeracion[enumeracion["b"] = 11] = "b";
+        enumeracion[enumeracion["c"] = 9] = "c";
+        enumeracion[enumeracion["d"] = 10] = "d";
+    })(enumeracion || (enumeracion = {}));
+    console.log(enumeracion.d);
+    console.log(enumeracion);
 })();

@@ -28,4 +28,15 @@
 
   console.log(nota)
   console.log(EscalaCalificaciones)
+
+  //cuando no se colocan valores en las variables estan toman la unidad siguiente a la variable anterior
+  enum enumeracion {
+    a=10,
+    b,
+    c=9,
+    d
+  }
+
+  console.log(enumeracion.d)
+  console.log(enumeracion)
 })()
