@@ -60,5 +60,5 @@
   const avengersTuple: [string, number, boolean] = ['Cap. América', 500, true]
 
   const [nombre, power, situacion] = avengersTuple
-  console.log({nombre, power, situacion})
+  console.log(nombre, power, situacion)
 })()
