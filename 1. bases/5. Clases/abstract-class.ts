@@ -27,10 +27,21 @@
     }
   }
 
-  const wolverine = new Xmen('Wolverine', 'Logan');
+  /*--------- FORMA DE INSTANCIAR UNA CLASE ---------*/
+  /**Primero a través de una variable, la cual para efectos de integridad de datos se le asigna el tipo de la clase */
+  let wolverine: Xmen;
+  wolverine = new Xmen('Wolverine', 'Logan');
+  /** Luego de tipo constante */
   const magneto = new Villian('Magneto', 'Magnus');
 
+  /**Aquí se llaman las funciones definidas dentro de las clases */
   console.log(wolverine.salvarMundo());
   console.log(magneto.conquistarMundo());
 
+  /** Se puede asignar a un parametro de una función la clase que debería contener el objecto que recibe */
+  const printName = ( character: Mutante ) => {
+    console.log( character.realName );
+  }
+
+  printName(wolverine);
 })()
