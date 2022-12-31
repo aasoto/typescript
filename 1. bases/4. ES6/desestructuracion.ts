@@ -1,4 +1,6 @@
 (()=> {
+  /*----------------- DESESTRUCTURACIÓN DE OBJECTOS -------------------*/
+
   /**
    * La desestructuración de objectos en TypeScript se hace similar a JavaScript, solo que aquí
    * se recomienda la definir el type cuando se declara un objecto
@@ -31,7 +33,32 @@
   const actores = ({ironman, activo}:Avengers) => {
     console.log(ironman.toLowerCase(), activo)
   }
-  
+
   //por último pasar el parametro a la función
   actores(avengers)
+
+  //tambien se puede desestructurar de la siguiente manera
+  //donde resto es un arreglo de los valores restantes
+  const actores2 = ({nick, ...resto}:Avengers) => {
+    console.log(nick, resto)
+  }
+
+  actores2(avengers)
+
+  /*----------------- DESESTRUCTURACIÓN DE ARREGLOS -------------------*/
+  const arreglo1:string[] = ['Valledupar', 'César', 'Colombia', 'América del Sur'] //arreglo
+
+  //para hacer la desestructuración del arreglo anterior se deben especificar los nombres de las variables deacuerdo a la posición que se encuentren en el arreglo
+  //aquí para desestructurar el valor de la segunda posición del arreglo
+  const [ , dpto ] = arreglo1
+  console.log({dpto})
+  //desetructurar todos los elementos
+  const [ ciudad , departamento, pais, continente ] = arreglo1
+  console.log( ciudad , departamento, pais, continente )
+
+  //para desestructurar una tupla
+  const avengersTuple: [string, number, boolean] = ['Cap. América', 500, true]
+
+  const [nombre, power, situacion] = avengersTuple
+  console.log({nombre, power, situacion})
 })()
