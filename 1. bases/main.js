@@ -1,21 +1,26 @@
 "use strict";
 (() => {
-    const ironMan = {
-        name: 'Iron man',
-        weapon: 'Armadura'
-    };
-    const captainAmerica = {
-        name: 'Capitan América',
-        weapon: 'Escudo'
-    };
-    const thor = {
-        name: 'Thor',
-        weapon: 'Martillo'
-    };
-    const superHeroes = [ironMan, captainAmerica, thor];
-    for (const heroe of superHeroes) {
-        const { name, weapon } = heroe;
-        console.log(name, weapon);
+    class Avenger {
+        constructor(name, realName) {
+            this.name = name;
+            this.realName = realName;
+            console.log('Constructor inicializado.');
+        }
+        getFullName() {
+            return `${this.name} ${this.realName}`;
+        }
     }
+    class Xmen extends Avenger {
+        constructor(name, realName, isMutant) {
+            super(name, realName);
+            this.isMutant = isMutant;
+            console.log('Constructor Xmen llamado');
+        }
+        getFullNameDesdeXmen() {
+            console.log(this.getFullName());
+        }
+    }
+    const wolverine = new Xmen('Wolverine', 'Logan', true);
+    wolverine.getFullNameDesdeXmen();
 })();
 //# sourceMappingURL=main.js.map
