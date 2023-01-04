@@ -1,23 +1,41 @@
 "use strict";
-(() => {
-    class Apocalipsis {
-        constructor(name) {
-            this.name = name;
-        }
-        static callApocalipsis() {
-            if (!Apocalipsis.instance) {
-                Apocalipsis.instance = new Apocalipsis('Soy apocalipsis el único.');
-            }
-            return Apocalipsis.instance;
-        }
-        changeName(newName) {
-            this.name = newName;
-        }
+const conducirBatimovil = (auto) => {
+    auto.encender = true;
+    auto.velocidadMaxima = 100;
+    auto.acelear();
+};
+const batimovil = {
+    encender: false,
+    velocidadMaxima: 0,
+    acelear() {
+        console.log("...... gogogo!!!");
     }
-    const apocalipsis1 = Apocalipsis.callApocalipsis();
-    const apocalipsis2 = Apocalipsis.callApocalipsis();
-    const apocalipsis3 = Apocalipsis.callApocalipsis();
-    apocalipsis3.changeName('Xavier');
-    console.log(apocalipsis1, apocalipsis2, apocalipsis3);
-})();
+};
+conducirBatimovil(batimovil);
+const guason = {
+    reir: true,
+    comer: true,
+    llorar: false
+};
+const reir = (guason) => {
+    if (guason.reir) {
+        console.log("JAJAJAJA");
+    }
+};
+const ciudadGotica = (ciudadanos) => {
+    return ciudadanos.length;
+};
+class Persona {
+    constructor(nombre, edad, sexo, estadoCivil) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.sexo = sexo;
+        this.estadoCivil = estadoCivil;
+    }
+    imprimirBio() {
+        console.log(`${this.nombre} - ${this.edad} | ${this.sexo}`);
+    }
+}
+const persona = new Persona('Andrés Soto', 25, 'Másculino', 'Soltero');
+persona.imprimirBio();
 //# sourceMappingURL=main.js.map
